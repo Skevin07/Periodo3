@@ -1,14 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <html>
 <head>
+
 	<meta charset="ISO-8859-1">
 	<title>Proveedores</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
+<script type="text/javascript">
+$(document).ready(function (){
+		$.post('ControllerProveedores',{
+			//Esta seccion es para enviar peticiones al servidor
+			
+		}, function (response){
+			//Esta seccion es para recibir informacion
+			let datos = Json.parse(response);
+			//let datos = response.getAttribute("names");
+			console.log(datos);
+			//HACIENDO LA UNION DE CODIGO PARA MOSTRAR LOS DATOS
+			
+		});
+	});
+</script>
 <body>
 	<div class="container">
 		<div class="row">
