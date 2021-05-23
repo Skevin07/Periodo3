@@ -4,7 +4,8 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
 	                    <p class="text-muted"> Ingresa tus credenciales para Acceder!</p> 
 	                    <input type="text" name="user" autocomplete="false" placeholder="Usuario"> 
 	                    <input type="password" name="pass" placeholder="Contrase&ntilde;a"> 
-	                    <input class="form-check-input" type="checkbox" name="ch" id="ch">
+	                    <input class="form-check-input" type="checkbox" name="tipo" id="ch">
 						<label class="form-check-label text-white" for="ch">&nbsp;&nbsp;&nbsp;Admin</label>
 						<br>
 						<br>
