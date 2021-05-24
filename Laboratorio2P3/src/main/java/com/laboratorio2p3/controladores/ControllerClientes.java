@@ -1,13 +1,17 @@
 package com.laboratorio2p3.controladores;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.table.DefaultTableModel;
 
 import com.google.gson.Gson;
 import com.laboratorio2p3.dao.ClienteDao;
+import com.laboratorio2p3.entidades.Cliente;
 
 /**
  * Servlet implementation class ControllerClientes
@@ -18,8 +22,9 @@ public class ControllerClientes extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControllerClientes() {
+    public ControllerClientes() {	
         super();
+        
         // TODO Auto-generated constructor stub
     }
 
@@ -29,13 +34,13 @@ public class ControllerClientes extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		String form= request.getParameter("cliente");
-		if(form=="1") {
-			
-		}else {
-			//Codigo de CRUD
-			
-		}
+		Gson json = new Gson();
+		ClienteDao clsUser = new ClienteDao();
+		response.sendRedirect("crudClientes.jsp");
+		response.getWriter().append(json.toJson(clsUser.MostrarClientes()));
+		
+		
+		
 	}
 
 	/**
@@ -44,10 +49,10 @@ public class ControllerClientes extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		Gson json = new Gson();
-		ClienteDao clsUser = new ClienteDao();
-		response.sendRedirect("crudClientes.jsp");
-		response.getWriter().append(json.toJson(clsUser.MostrarClientes()));
+		doGet(request, response);
+		
 	}
-
+	
+	
+	
 }
